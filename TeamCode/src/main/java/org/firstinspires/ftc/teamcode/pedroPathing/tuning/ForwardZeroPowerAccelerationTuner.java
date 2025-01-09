@@ -124,7 +124,9 @@ public class ForwardZeroPowerAccelerationTuner extends OpMode {
     public void loop() {
         if (gamepad1.cross || gamepad1.a) {
             for (DcMotorEx motor : motors) {
-                motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+                //motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+                motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
+
                 motor.setPower(0);
             }
             requestOpModeStop();

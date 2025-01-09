@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode.pedroAutonomousPaths;
 //import com.pedropathing.pathgen.BezierCurve;
 //import com.pedropathing.pathgen.BezierLine;
 //import com.pedropathing.pathgen.Point;
+import android.provider.SyncStateContract;
+
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.sun.tools.javac.util.Constants;
@@ -105,7 +107,5 @@ public class TestingPath_1 extends OpMode {
         pathTimer = new Timer();
         opModeTimer = new Timer();
         opModeTimer.resetTimer();
-
-
     }
 }

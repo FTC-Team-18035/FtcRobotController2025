@@ -158,7 +158,7 @@ public class DriveVectorScaler {
      * @param maxPowerScaling setting the max power scaling
      */
     public void setMaxPowerScaling(double maxPowerScaling) {
-        this.maxPowerScaling = MathFunctions.clamp(maxPowerScaling, 0, 1);
+        this.maxPowerScaling = MathFunctions.clamp(maxPowerScaling, 0, 1);  //1  .75   .5
     }
 
     /**

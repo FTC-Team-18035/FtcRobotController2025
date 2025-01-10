@@ -10,27 +10,27 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
 @TeleOp(name = "Claw Test")
 public class ClawTest extends LinearOpMode {
 
-    private boolean OuttakeClawClosed = false;
+    private boolean IntakeClawClosed = false;
     private ElapsedTime ClawTime = new ElapsedTime();
 
     @Override
     public void runOpMode(){
 
-        Servo OuttakeClaw = hardwareMap.servo.get("Outtake Claw");
+        Servo IntakeClaw = hardwareMap.servo.get("Intake Claw");
 
-        OuttakeClaw.setPosition(0);
+        IntakeClaw.setPosition(0);
 
         waitForStart();
         while(opModeIsActive()){
-            if (gamepad1.b && !OuttakeClawClosed && ClawTime.seconds() >= .3){
+            if (gamepad1.b && !IntakeClawClosed && ClawTime.seconds() >= .3){
                 ClawTime.reset();
-                OuttakeClaw.setPosition(.5);
-                OuttakeClawClosed = true;
+                IntakeClaw.setPosition(.5);
+                IntakeClawClosed = true;
             }
-            else if (gamepad1.b && OuttakeClawClosed && ClawTime.seconds() >= .3){
+            else if (gamepad1.b && IntakeClawClosed && ClawTime.seconds() >= .3){
                 ClawTime.reset();
-                OuttakeClaw.setPosition(0);
-                OuttakeClawClosed = false;
+                IntakeClaw.setPosition(0);
+                IntakeClawClosed = false;
             }
         }
     }
